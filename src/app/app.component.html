@@ -1,0 +1,32 @@
+<header>
+    <div class="container">
+        <h1 class="logo">
+            <img src="assets/logo.svg" alt class="logo__image">
+            Raa's currency exchange
+        </h1>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <h2>Currency Converter</h2>
+                <app-exchange-form (selectedCurrency)="setSelectedCurrency($event)"></app-exchange-form>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="rates" *ngIf="selectedCurrency">
+                <h2>{{selectedCurrency.name}} rate details</h2>
+                <app-rates [selectedCurrency]="selectedCurrency"></app-rates>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <a href="http://fixer.io" class="footer__link" target="_blank">Api</a>
+        <a href="http://mateusz-szmytko.pl" class="footer__link" target="_blank">Github</a>
+        <a href="http://mateusz-szmytko.pl" class="footer__link" target="_blank">mateusz-szmytko.pl</a>
+    </div>
+</footer>

@@ -1,0 +1,29 @@
+.exchangeForm {
+    margin: 20px 0;
+}
+.exchangeForm__pickers {
+    margin: 20px 0;
+}
+.exchangeForm__input-group {
+    padding: 0 15px;
+}
+.exchangeForm__output {
+    margin: 20px 0;
+}
+
+.exchangeForm__output {
+    background: #0071bc;
+    padding: 30px 0;
+    margin: 0 15px;
+}
+
+.exchangeForm__output p {
+    color: white;
+    text-align: center;
+}
+
+.output__amount {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+}

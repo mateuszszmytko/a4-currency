@@ -1,0 +1,38 @@
+.rates {
+    margin: 15px 0;
+}
+
+.rates ul {
+    list-style: none;
+    margin: 0 5px;
+    padding-left: 0;
+}
+
+.rates__rate {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+.rate__flag {
+    width: 60px;
+    border: 1px solid lightgray;
+}
+
+.rate__number {
+    margin: 5px 0 0;
+}
+
+.rate__number--down {
+    color: red;
+}
+.rate__number--down::after {
+    content: "\25BC";
+}
+.rate__number--up {
+    color: green;
+}
+.rate__number--up::after {
+    content: "\25B2";
+}

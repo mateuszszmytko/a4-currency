@@ -1,0 +1,39 @@
+
+<form action="" class="exchangeForm">
+    <div class="exchangeForm__input-group">
+        <label for="amountInput" class="sr-only" aria-hidden="true">Amount</label>
+        <input type="number" (keyup)="setMoneyAmount($event)" 
+                    class="form-control" id="amountInput" placeholder="Amount">
+    </div>
+
+    <div class="row exchangeForm__pickers">
+        <div class="col-md-6">
+            <label for="firstCurrency">Currency I have </label>
+            <app-currency-picker id="firstCurrency" (setCurrency)="setCurrency(1, $event)"></app-currency-picker>
+        </div>
+
+        <div class="col-md-6">
+            <label for="secondCurrency">Currency I want</label>
+            <app-currency-picker id="secondCurrency"  (setCurrency)="setCurrency(2, $event)"></app-currency-picker>
+        </div>   
+    </div>
+</form>
+<div *ngIf="moneyAmount > 0" class="exchangeForm__output">
+    <div class="row">
+        <div class="col-md-5 col-xs-12">
+            <p class="output__amount">{{moneyAmount| number:'1.0-2'}} {{firstCurrency.code}}</p>
+            <p>{{firstCurrency.name}}</p>
+            <p>1 {{firstCurrency.code}} = 
+                {{firstCurrency.getRate(secondCurrency.code) | number:'1.0-2'}} {{secondCurrency.code}}</p>
+        </div>
+        <div class="col-md-2 col-xs-12">
+            <p class="out">=</p>
+        </div>
+        <div class="col-md-5 col-xs-12">
+            <p class="output__amount">{{ firstCurrency.getRate(secondCurrency.code, moneyAmount) | number:'1.0-2'}} {{secondCurrency.code}}</p>
+            <p>{{secondCurrency.name}}</p>
+            <p>1 {{secondCurrency.code}} = 
+                {{secondCurrency.getRate(firstCurrency.code) | number:'1.0-2'}} {{firstCurrency.code}}</p>
+            </div>
+    </div>  
+</div>

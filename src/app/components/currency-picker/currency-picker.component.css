@@ -1,0 +1,69 @@
+.currencyPicker {
+    position: relative;
+}
+.currencyPicker__header {
+    padding: 5px 10px;
+    border: 1px lightgray solid;
+    cursor: pointer;
+}
+.currencyPicker__header:hover {
+    background: #0071bc;
+    color: white;
+}
+.header__text {
+    margin: 0;
+}
+
+.header__flag {
+    width: 20px;
+    display: inline-block;
+    vertical-align: sub;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.currencyPicker__body {
+    height: 150px;
+    overflow-y: scroll;
+    position: absolute;
+    border: 1px lightgray solid;
+    border-top: 0; 
+    z-index: 100;
+    background: white;
+    width: 100%;
+    left: 0;
+    top: 100%;;
+}
+.body__filter input {
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    font-size: 12px;
+}
+.currencyPicker__body ul {
+    list-style: none;
+    padding: 0px;
+}
+.body__option {
+    cursor: pointer;
+    padding: 5px;
+}
+.body__option:hover {
+    background: #337ab7;
+}
+.body__option:hover p {
+    color: white;
+}
+
+.body__option > * {
+    display: inline-block;
+}
+.body__option > img {
+    width: 15px;
+    margin-right: 5px
+}
+.body__option > p {
+    margin: 0;
+    font-size: 12px;
+}
+.currency > p > span {
+    color: grey;
+}

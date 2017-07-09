@@ -1,0 +1,45 @@
+[
+	
+	{
+		"code": "EUR",
+		"symbol": "#",
+		"name": "Euro",
+		"country": "Europe",
+		"countryCode": "EU"
+	},
+	{
+		"code": "USD",
+		"symbol": "$",
+		"name": "US Dollar",
+		"country": "United States",
+		"countryCode": "US"
+	},
+	{
+		"code": "GBP",
+		"symbol": "GBP",
+		"name": "British Pound",
+		"country": "England",
+		"countryCode": "GB"
+	},
+	{
+		"code": "PLN",
+		"symbol": "zł",
+		"name": "Polish zloty",
+		"country": "Poland",
+		"countryCode": "PL"
+	},
+	{
+		"code": "AUD",
+		"symbol": "#",
+		"name": "Australian Dollar",
+		"country": "Australia",
+		"countryCode": "AU"
+	},
+	{
+		"code": "CAD",
+		"symbol": "#",
+		"name": "Canadian Dollar",
+		"country": "Canada",
+		"countryCode": "CA"
+	}
+]

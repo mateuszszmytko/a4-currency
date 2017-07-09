@@ -1,0 +1,12 @@
+<div class="rates">
+    <ul>
+        <li *ngFor="let currency of currencies" class="rates__rate">
+            <img [src]="currency.url" [title]="currency.name" class="rate__flag">
+            <p class="rate__number"
+                [class.rate__number--up]="selectedCurrency.isGrowing(currency.code)"
+                [class.rate__number--down]="selectedCurrency.isFalling(currency.code)">
+                {{selectedCurrency.getRate(currency.code) | number:'1.2-4'}}
+            </p>
+        </li>
+    </ul>
+</div>

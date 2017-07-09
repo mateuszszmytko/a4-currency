@@ -1,0 +1,23 @@
+
+<div *ngIf="selectedCurrency" class="currencyPicker">
+    <div class="currencyPicker__header" (click)="tooglePicker()">
+        <p class="header__text">
+            <img [src]="selectedCurrency.url" [title]="selectedCurrency.name" class="header__flag">
+            {{selectedCurrency.code}} <span>({{selectedCurrency.name}})</span>
+        </p>
+    </div>
+    <div class="currencyPicker__body" *ngIf="pickerActive">
+        <div class="body__filter">
+            <label class="sr-only" for="filter">Filter</label>
+            <input type="text" (keyup)="setFilter($event)" class="form-control" id="filter" placeholder="Filter..">
+        </div>
+        <ul>
+            <li *ngFor="let currency of currencies | currencyFilter: currFilter"
+                class="body__option"
+                (click)="selectCurrency(currency)">
+                <img [src]="currency.url" [title]="currency.name">
+                <p>{{currency.code}} <span>({{currency.name}})</span></p>
+            </li>
+        </ul>
+    </div>
+</div>
